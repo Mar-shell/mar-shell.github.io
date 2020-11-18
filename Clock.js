@@ -63,11 +63,11 @@ class Clock
         // date
         this.c.font = this.fontSize + "px Arial"
         this.c.fillStyle = "white"
-        this.c.fillText(this.time,this.x-80,this.y)
+        this.c.fillText(this.time,this.x-70,this.y)
 
         // time
         this.c.font = (this.fontSize-this.fontSize/2)-5 + "px Arial"
         this.c.fillStyle = "white"
-        this.c.fillText(this.today,this.x-80,this.y+30)
+        this.c.fillText(this.today,this.x-70,this.y+30)
     }
 }
