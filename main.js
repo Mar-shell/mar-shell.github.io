@@ -7,7 +7,7 @@ function resizeCanvas()
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     
-    if (canvas.width > 400)
+    if (canvas.width < 400)
     {
         radius = 170
     }
