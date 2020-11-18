@@ -43,6 +43,22 @@ addEventListener("mouseup", function()
     isClick = false
 })
 
+addEventListener("touchmove",function(e)
+{
+    posPointX = e.changedTouches[0].clientX
+    posPointY = e.changedTouches[0].clientY
+})
+
+addEventListener("touchstart", function()
+{
+    isClick = true
+})
+
+addEventListener("touchend", function()
+{
+    isClick = false
+})
+
 function scene()
 {
     var clock = new Clock(c,canvas.width/2,canvas.height/2,radius,fontSize)
