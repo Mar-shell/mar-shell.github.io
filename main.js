@@ -1,7 +1,7 @@
 var canvas = document.querySelector("canvas")
 var c = canvas.getContext("2d")
 var radius = 0,
-    sizeFont = 0
+    fontSize = 0
 
 function resizeCanvas()
 {
@@ -11,12 +11,12 @@ function resizeCanvas()
     if (window.innerWidth < 400)
     {
         radius = 150
-        sizeFont = 35
+        fontSize = 35
     }
     else
     {
         radius = 200
-        sizeFont = 45
+        fontSize = 45
     }
 }
 resizeCanvas()
