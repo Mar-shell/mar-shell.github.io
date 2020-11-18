@@ -47,6 +47,8 @@ addEventListener("touchmove",function(e)
 {
     posPointX = e.changedTouches[0].clientX
     posPointY = e.changedTouches[0].clientY
+    
+    console.log("Move!")
 })
 
 addEventListener("touchstart", function()
