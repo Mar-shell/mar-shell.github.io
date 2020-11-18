@@ -8,7 +8,7 @@ function degToRad(degree)
 
 class Clock
 {
-    constructor(context,x,y, radius)
+    constructor(context,x,y, radius, fontSize = 45)
     {
         this.c = context
         this.x = x
@@ -18,6 +18,11 @@ class Clock
         this.seconds = 0
         this.milliseconds = 0
         this.radius = radius
+        this.fontSize = fontSize
+        if (this.fontSize < 25)
+        {
+            this.fontSize = 25
+        }
     }
 
     getDate()
@@ -56,12 +61,12 @@ class Clock
         this.c.stroke()
 
         // date
-        this.c.font = "45px Arial"
+        this.c.font = this.fontSize + "px Arial"
         this.c.fillStyle = "white"
         this.c.fillText(this.time,this.x-80,this.y)
 
         // time
-        this.c.font = "15px Arial"
+        this.c.font = (this.fontSize-this.fontSize/2)-5 + "px Arial"
         this.c.fillStyle = "white"
         this.c.fillText(this.today,this.x-80,this.y+30)
     }
