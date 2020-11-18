@@ -1,5 +1,3 @@
-// Origin author Andrew T: https://www.youtube.com/watch?v=9dtDaWi6R0g&t=1703s
-
 function degToRad(degree)
 {
     var factor = Math.PI / 180
@@ -40,23 +38,46 @@ class Clock
     create()
     {
         this.getDate()
-        this.c.lineWidth = 17
         this.c.lineCap = "round"
         // hours
+        this.c.lineWidth = 17
         this.c.beginPath()
         this.c.strokeStyle = "#6eeb34"
         this.c.arc(this.x,this.y,this.radius,degToRad(270),degToRad((this.hours*15)-90))
         this.c.stroke()
 
+        // hours inline
+        this.c.lineWidth = 8
+        this.c.beginPath()
+        this.c.strokeStyle = "#333333"
+        this.c.arc(this.x,this.y,this.radius,degToRad(270),degToRad((this.hours*15)-90))
+        this.c.stroke()
+
         // minutes
+        this.c.lineWidth = 17
         this.c.beginPath()
         this.c.strokeStyle = "#e8eb34"
         this.c.arc(this.x,this.y,this.radius-30,degToRad(270),degToRad((this.minutes*6)-90))
         this.c.stroke()
 
+        // minutes inline
+        this.c.lineWidth = 8
+        this.c.beginPath()
+        this.c.strokeStyle = "#333333"
+        this.c.arc(this.x,this.y,this.radius-30,degToRad(270),degToRad((this.minutes*6)-90))
+        this.c.stroke()
+
         // seconds
+        this.c.lineWidth = 17
         this.c.beginPath()
         this.c.strokeStyle = "#eb8334"
+        this.c.arc(this.x,this.y,this.radius-60,degToRad(270),degToRad((this.newSeconds*6)-90))
+        this.c.stroke()
+
+        // seconds inline
+        this.c.lineWidth = 8
+        this.c.beginPath()
+        this.c.strokeStyle = "#333333"
         this.c.arc(this.x,this.y,this.radius-60,degToRad(270),degToRad((this.newSeconds*6)-90))
         this.c.stroke()
 
@@ -69,5 +90,10 @@ class Clock
         this.c.font = (this.fontSize-this.fontSize/2)-5 + "px Arial"
         this.c.fillStyle = "white"
         this.c.fillText(this.today,this.x-70,this.y+30)
+
+        // Author
+        this.c.font = "24px Arial"
+        this.c.fillStyle = "rgb(255,115,0)"
+        this.c.fillText("MRSH", this.x-70,this.y+50)
     }
 }
