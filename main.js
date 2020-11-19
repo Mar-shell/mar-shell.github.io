@@ -14,7 +14,7 @@ function resizeCanvas()
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
 
-    if (window.innerWidth < 600)
+    if (window.innerWidth < 440)
     {
         radius = 150
         fontSize = 35
