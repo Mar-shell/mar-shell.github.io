@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px;
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background: url(img/bg.jpg);
+    background-size: cover;
+    background-position-x: right;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1 {
+    position: relative;
+    font-size: 2.5em;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.banner h1 span{
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.banner h2 {
+    font-size: 1.5em;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.heading {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.heading h2 {
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 2.5em;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 30px;
+    background-color: #e40;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    line-height: 1.5em;
+}
+
+.contentBx {
+    margin-right: 30px;
+}
+
+.contentBx h3{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.w30 {
+    max-width: 30%;
+}
+.w70 {
+    max-width: 70%;
+}
+
+.dataBx h3{
+    text-align: right;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.dataBx p {
+    padding: 20px 10px;
+    color: #fff;
+    background-color: rgb(36, 230, 110);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background-color: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+    padding: 0 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header.sticky ul li a {
+    color: #111;
+}
+
+.services {
+    background-color: #111;
+}
+
+.heading.white {
+    color: white;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx {
+    padding: 40px 20px;
+    background-color: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover {
+    background-color: rgb(20, 129, 111);
+}
+
+.works .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.works .content .workBx {
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #000;
+    color: #fff;
+    min-width: 340px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.works .content .workBx:hover {
+    background-color: rgb(162, 23, 204);
+}
+
+.contact {
+    background-color: #111;
+}
+
+.formBx {
+    min-width: 60%;
+}
+
+.formBx form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input,
+.formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+    resize: none;
+}
+
+.formBx form textarea {
+    min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder{
+    color: #999;
+}
+
+.formBx form input[type="submit"] {
+    max-width: 100px;
+    background: #e40;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.contactInfo {
+    min-width: 40%;
+}
+.contactInfoBx{
+    position: relative;
+}
+.contactInfoBx .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfoBx .text {
+    display: flex;
+    margin-left: 20px;
+    font-style: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactInfoBx .text h3 {
+    font-weight: 500;
+    color: #e40;
+    margin-bottom: 0;
+}
+
+.copyright {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 991px){
+    header,
+    header.sticky {
+        padding: 20px 50px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        transition: 0.5;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+    }
+    .menu.active {
+        left: 0;
+    }
+
+    header ul li a {
+        line-height: 2.5em;
+        font-size: 24px;
+        margin: 10px;
+        color: #111;
+    }
+
+    .toggle {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .toggle.active,
+    header.sticky .toggle.active {
+        background-color: #f00;
+    }
+
+    header.sticky .toggle {
+        background-color: #000;
+    }
+    section {
+        padding: 100px 50px;
+    }
+    .banner {
+        padding: 150px 50px 100px;
+    }
+    .banner h1 {
+        font-size: 1.5em;
+    }
+    .banner h2 {
+        font-size: 1em;
+    }
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .heading h2 {
+        font-size: 24px;
+    }
+
+    .contentBx h3 {
+        font-size: 20px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .w70 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .w30 {
+        max-width: 100%;
+    }
+    .dataBx h3 {
+        text-align: left;
+    }
+    .dataBx p {
+        max-width: 100%;
+    }
+    .services .content .servicesBx {
+        margin: 10px;
+    }
+    .contactInfo {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 600px){
+    header,
+    header.sticky{
+        padding: 20px;
+    }
+
+    .banner {
+        padding: 150px 20px 100px;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+    .works .content .workBx {
+        border-radius: 10px;
+        padding: 20px;
+        color: #fff;
+        min-width: auto;
+        margin: 5px;
+    }
+}
